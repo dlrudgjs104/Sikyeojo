@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: sikyeojo-front
+
+  # HTML form 에서 GET, POST 뿐 아니라 PUT, DELETE 도 사용하기 위해서 설정
+  mvc:
+    hidden method:
+      filter:
+        enabled: true
+
+  # 라이브 리로드 활성화
+  devtools:
+    livereload:
+      enabled: true
+
+  # 캐시 비활성화
+  thymeleaf:
+    cache: false
+
+logging:
+  file:
+    path: ./logs
+
+  level:
+    com.netflix.discovery: ERROR
+    com.netflix.eureka: ERROR
